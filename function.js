@@ -9,10 +9,6 @@ let ticketPrice = 550;
 for(const seat of seats){
 seat.addEventListener('click', function(event){
 
-//     counter = counter + 1;
-// if(counter = 4){
-//     seats.disabled = true;
-// }
     event.target.classList.add("pointer-events-none");
     seat.style.backgroundColor = '#1DD100';
     
@@ -25,6 +21,10 @@ document.getElementById('seats-left').innerText = newSeat - 1;
 const counts = document.getElementById('count').innerText;
 const newCount = parseInt(counts);
 document.getElementById('count').innerText = newCount + 1;
+
+if(counts === 4){
+    newCount.classList.add = 'hidden';
+}
 
 const totalPrice = document.getElementById('total-price').innerText;
 const newPrice = parseInt(totalPrice);
@@ -83,6 +83,8 @@ else{
     alert('the code was wrong');
 }
 })
+
+
 
 
 
